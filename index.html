@@ -5,59 +5,225 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BaseCraft - Building Scalable MVPs</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-content">
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="BaseCraft Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   
   <section id="home">
     <h1>Building Scalable MVPs with Precision and Efficiency</h1>
-    <p>Helping startups turn ideas into products quickly and cost-effectively.</p>
-    <button onclick="scrollToContact()">Get Started</button>
+    <p class="hero-subtitle">Transform your ideas into successful products with our expert MVP development services.</p>
+<br>
+    
+    <div class="key-highlights">
+      <div class="highlight-item">
+        <i class="fas fa-rocket"></i>
+        <span>Expertise in building MVPs for unicorns</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-code-branch"></i>
+        <span>Scalable Architecture</span>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-clock"></i>
+        <span>Quick Turnaround</span>
+      </div>
+    </div>
+    <br>
+
+    <div class="tech-stack">
+      <p class="tech-label">Technologies we work with:</p>
+      <div class="tech-icons">
+        <i class="fab fa-aws" title="Amazon Web Services"></i>
+        <i class="fab fa-google" title="Google Cloud Platform"></i>
+        <i class="fab fa-react" title="React"></i>
+        <i class="fab fa-angular" title="Angular"></i>
+        <i class="fab fa-node-js" title="Node.js"></i>
+        <i class="fab fa-python" title="Python"></i>
+        <i class="fab fa-android" title="Android"></i>
+        <i class="fab fa-apple" title="iOS"></i>
+        <i class="fas fa-database" title="MySQL"></i>
+        <i class="fab fa-docker" title="Docker"></i>
+        <i class="fab fa-kubernetes" title="Kubernetes"></i>
+      </div>
+    </div>
+<br>
+    <div class="cta-buttons">
+      <button onclick="scrollToContact()" class="primary-btn">Get Started</button>
+      <!-- <button onclick="scrollToServices()" class="secondary-btn">View Services</button>  -->
+    </div>
+
+    <!-- <div class="trusted-by">
+      <p>Founding Engineer at</p>
+      <div class="company-logos">
+        <a href="https://bharatagri.com" target="_blank" class="company-link">BharatAgri</a>
+        <a href="https://apna.co" target="_blank" class="company-link">Apna</a>
+        <a href="https://apollofinvest.com" target="_blank" class="company-link">Apollo Finvest</a>
+      </div>
+    </div> -->
   </section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>BaseCraft is focused on providing MVP development services for startups...</p>
+    <div class="about-content">
+      <div class="about-text">
+        <p>BaseCraft specializes in turning innovative ideas into successful products through our proven MVP development process. We combine technical expertise with strategic thinking to help startups launch faster and smarter.</p>
+        <ul class="about-features">
+          <li><i class="fas fa-rocket"></i> Rapid Development</li>
+          <li><i class="fas fa-code"></i> Clean Architecture</li>
+          <li><i class="fas fa-chart-line"></i> Scalable Solutions</li>
+          <li><i class="fas fa-users"></i> Dedicated Team</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder">
+    <div class="founder-content">
+      <div class="founder-text">
+        <h2>Meet the Founder</h2>
+        <div class="founder-intro">
+          <div class="founder-header">
+            <h3>Ajay Shelar</h3>
+            <a href="https://www.linkedin.com/in/ajayel/" class="founder-title">Founder, BaseCraft</a>
+          </div>
+          <p class="founder-quote">My mission is to empower startups by providing affordable, high-quality MVPs that can be iterated quickly based on real user feedback.</p>
+        </div>
+        <div class="founder-background">
+          <div class="experience-card">
+            <i class="fas fa-briefcase"></i>
+            <h4>Professional Background</h4>
+            <p>Over 7 years of experience in building and scaling innovative tech solutions, with expertise in cloud technologies, scalable architectures, and software development.</p>
+          </div>
+          <div class="experience-card">
+            <i class="fas fa-history"></i>
+            <h4>Previous Roles</h4>
+            <p>Founding Software Engineer and Tech Lead at early stage startups like <a href="https://bharatagri.com">BharatAgri</a>, <a href="https://apna.co">Apna(unicorn)</a> , <a href="https://apollofinvest.com">Apollo finvest</a>, leading core product development and scaling.</p>
+          </div>
+          <div class="experience-card">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Vision</h4>
+            <p>Helping startups preserve their runway while validating ideas through quick, efficient MVP development and ensuring scalable solutions.</p>
+          </div>
+        </div>
+        <div class="founder-expertise">
+          <h4>Core Expertise</h4>
+          <div class="expertise-tags">
+            <span>Cloud Computing</span>
+            <span>Scalable Architecture</span>
+            <span>MVP Development</span>
+            <span>Startup Solutions</span>
+            <span>AWS & GCP</span>
+            <span>Microservices</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
-    <ul>
-      <li>Basic MVP - Quick, cost-efficient MVPs to validate your idea.</li>
-      <li>Core MVP - Full-featured MVPs for early-stage product development.</li>
-      <li>Full-Fledged Product - Scaling your MVP into a complete solution.</li>
-    </ul>
-  </section>
-
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="project-gallery">
-      <!-- Projects will be added dynamically here using JavaScript -->
+    <p class="services-intro">At BaseCraft, we offer a range of services to help startups turn their ideas into reality, ensuring they have the right foundations for scalability and success.</p>
+    <div class="detailed-services">
+      <div class="service-block">
+        <h3>1. MVP Software Development</h3>
+        <p>We specialize in building Minimum Viable Products (MVPs) to help startups validate their ideas and get to market faster. Our MVP development services are tailored to meet the unique needs of your product and business goals.</p>
+        <ul class="service-list">
+          <li>
+            <strong>a) Web:</strong> Development of responsive, fast, and scalable web applications that focus on core features to help you validate your business idea with real users.
+          </li>
+          <li>
+            <strong>b) Android and iOS App:</strong> Creation of mobile applications for both Android and iOS platforms, designed for seamless performance and user engagement from day one.
+          </li>
+        </ul>
+      </div>
+      <div class="service-block">
+        <h3>2. Software Architecture</h3>
+        <p>We provide software architecture services to ensure that your system is built to scale, perform efficiently, and evolve with your needs as your business grows.</p>
+        <ul class="service-list">
+          <li>
+            <strong>a) Foundational Architecture:</strong> We design the core architecture of your application, laying the foundation for performance, scalability, and long-term maintenance.
+          </li>
+        </ul>
+      </div>
+      <div class="service-block">
+        <h3>3. Tech Lead Advisory</h3>
+        <p>As part of our advisory services, we offer expert guidance on architecture, code quality, and solution design to ensure that your tech decisions are aligned with your goals.</p>
+        <ul class="service-list">
+          <li>
+            <strong>a) Architecture Review:</strong> We assess and provide feedback on your existing system architecture to ensure it's scalable, maintainable, and well-suited to meet your product's long-term needs.
+          </li>
+          <li>
+            <strong>b) Code Review:</strong> We conduct in-depth code reviews to ensure that best practices are followed, and that your codebase is clean, efficient, and scalable.
+          </li>
+          <li>
+            <strong>c) Solution Designs:</strong> We help you design technical solutions that meet your business requirements while ensuring that the design is robust, scalable, and easy to maintain.
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
+  <!-- <section id="portfolio"> -->
+    <!-- <h2>Our Work</h2> -->
+    <!-- <div class="project-gallery"> -->
+      <!-- Projects will be added dynamically here using JavaScript -->
+    <!-- </div>
+  </section> -->
+
   <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" placeholder="Tell us about your project" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+    <h2>Start Your Project</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>Ready to bring your idea to life? Let's discuss how we can help you build your MVP.</p>
+        <div class="contact-details">
+          <p><i class="fas fa-envelope"></i> contact@basecraft.in</p>
+          <p><i class="fas fa-clock"></i> Response time: Within 24 hours</p>
+        </div>
+      </div>
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder="Tell us about your project" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>Contact us: <a href="mailto:contact@basecraft.in">contact@basecraft.in</a></p>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>© 2024 BaseCraft. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="mailto:ajay@basecraft.in">ajay@basecraft.in</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="app.js"></script>
