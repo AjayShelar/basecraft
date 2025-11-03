@@ -1,23 +1,55 @@
-// Scroll to the Contact section smoothly when the "Get Started" button is clicked
+// Scroll to the Contact section smoothly when the hero CTA is clicked
 function scrollToContact() {
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 }
 
-// Handle form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
 
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-  let message = document.getElementById('message').value;
-
-  if (name && email && message) {
-    // Here, you would typically send the form data to a server, but for now, we'll just log it
-    console.log('Form submitted', { name, email, message });
-
-    alert('Thank you for reaching out! We will get back to you soon.');
-    document.getElementById('contact-form').reset(); // Reset the form
+function updateFormStatus(message, type = 'success') {
+  if (!formStatus) return;
+  formStatus.textContent = message;
+  formStatus.classList.remove('is-success', 'is-error', 'is-visible');
+  formStatus.classList.add('is-visible');
+  if (type === 'error') {
+    formStatus.classList.add('is-error');
   } else {
-    alert('Please fill out all fields!');
+    formStatus.classList.add('is-success');
   }
-});
+}
+
+// Handle form submission
+if (contactForm) {
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name && email && message) {
+      console.log('Consultation request prepared', { name, email, message });
+
+      updateFormStatus('Opening your email client so you can send the details…', 'success');
+
+      const mailtoBody = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        '',
+        'Project Details:',
+        message
+      ].join('\n');
+
+      const mailtoLink = `mailto:ajay@basecraft.in?subject=${encodeURIComponent('Consultation request from ' + name)}&body=${encodeURIComponent(mailtoBody)}`;
+      window.location.href = mailtoLink;
+
+      contactForm.reset();
+
+      setTimeout(() => {
+        updateFormStatus('If your email client did not open, reach us at ajay@basecraft.in or WhatsApp +91 89289 94960.', 'success');
+      }, 1500);
+    } else {
+      updateFormStatus('Please complete all required fields before submitting the form.', 'error');
+    }
+  });
+}
