@@ -40,13 +40,13 @@ if (contactForm) {
         message
       ].join('\n');
 
-      const mailtoLink = `mailto:ajay@basecraft.in?subject=${encodeURIComponent('Consultation request from ' + name)}&body=${encodeURIComponent(mailtoBody)}`;
+      const mailtoLink = `mailto:ajay.shelar@basecraft.in?subject=${encodeURIComponent('Consultation request from ' + name)}&body=${encodeURIComponent(mailtoBody)}`;
       window.location.href = mailtoLink;
 
       contactForm.reset();
 
       setTimeout(() => {
-        updateFormStatus('If your email client did not open, reach us at ajay@basecraft.in or WhatsApp +91 89289 94960.', 'success');
+        updateFormStatus('If your email client did not open, reach us at ajay.shelar@basecraft.in or WhatsApp +91 89289 94960.', 'success');
       }, 1500);
     } else {
       updateFormStatus('Please complete all required fields before submitting the form.', 'error');
